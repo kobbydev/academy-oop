@@ -91,8 +91,8 @@ class Student {
 		console.log(this.#courses);
 	}
 }
-let st = new Student("kofi", 10, 2, ["math", "english"], 3.2);
-console.log(st);
+// let st = new Student("kofi", 10, 2, ["math", "english"], 3.2);
+// console.log(st);
 // ______________________________________________
 let studentRoll = [];
 /**
@@ -106,7 +106,11 @@ let studentRoll = [];
  */
 function createStudent(name, age, courses, grade) {
 	// create student
+	let newStudent = new Student(name, age, courses, grade);
 	// return student
+	return newStudent;
+
+	// return new Student (name, age, grade, courses)
 }
 
 /**
@@ -115,20 +119,29 @@ function createStudent(name, age, courses, grade) {
  */
 function enrollStudent(student) {
 	//append student to studentRoll array
+	studentRoll.push(student);
 }
-
+// student1 = createStudent("kofi", 19, 8, ["math", "french"]);
+// student2 = createStudent("kofi", 15, 8, ["math", "twi"]);
+// student3 = createStudent("kwame", 29, 8, ["math", "ga"]);
+// enrollStudent(student1);
 /**
  * Search students by given name
  * @param {string} name
  */
-function searchStudent(name) {}
+
+function searchStudent(name) {
+	return studentRoll.filter((nname) => nname.getName() === name);
+}
 
 /**
  * Returns list of students in given grade
  * @param {number} grade
  * @returns {Student[]}
  */
-function filterStudentsByGrade(grade) {}
+function filterStudentsByGrade(grade) {
+	return studentRoll.filter((ggrade) => ggrade.getGrade() === grade);
+}
 
 /**
  * Returns list of students who have ages between minAge and maxAge
@@ -136,4 +149,8 @@ function filterStudentsByGrade(grade) {}
  * @param {number} maxAge
  * @returns {Student[]}
  */
-function filterStudentsByAge(minAge, maxAge) {}
+function filterStudentsByAge(minAge, maxAge) {
+	return studentRoll.filter(
+		(aage) => aage.getAge() >= minAge && aage.getAge() <= maxAge
+	);
+}
