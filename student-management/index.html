@@ -4,9 +4,125 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<title>Document</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				padding: 10px;
+			}
+			label {
+				margin-right: 20px;
+			}
+			form {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			#submitbtn {
+				margin-top: 30px;
+				margin-bottom: 100px;
+			}
+			#closebtn {
+				display: none;
+				margin-top: 10px;
+			}
+			#display-students,
+			#display-search {
+				display: none;
+			}
+			.search {
+				margin-top: 10px;
+			}
+			#clear-search {
+				display: none;
+			}
+		</style>
 	</head>
 	<body>
+		<div class="form-div">
+			<form action="#" id="form">
+				<label for="name">Name</label>
+				<input type="text" id="name" placeholder="Enter student name" />
+				<p id="name-validator"></p>
+				<label for="age">Age</label>
+				<input type="number" id="age" />
+				<p id="age-validator"></p>
+				<label for="courses">Courses</label>
+				<input type="text" id="courses" />
+				<p id="courses-validator"></p>
+				<label for="grade">Grade</label>
+				<input type="number" id="grade" />
+				<p id="grade-validator"></p>
+				<button class="submit" id="submit-btn">Submit</button>
+			</form>
+			<button id="showbtn">Show Students</button>
+			<button id="closebtn">Close Students</button>
+		</div>
+		<div class="search">
+			<input type="text" id="search-bar" />
+			<button id="searchbtn">Search</button>
+		</div>
+		<div class="display-students" id="display-students">
+			<h1>Students List</h1>
+			<table class="table" id="table">
+				<thead>
+					<tr>
+						<th scope="col">Name</th>
+						<th scope="col">Age</th>
+						<th scope="col">Courses</th>
+						<th scope="col">Grade</th>
+					</tr>
+				</thead>
+				<tbody id="tbody">
+					<!-- <tr>
+						<th scope="row">1</th>
+						<td>This is a task</td>
+						<td>Lorem ipsum dolor sit amet consectetur adipisicing elit</td>
+						<td></td>
+					</tr> -->
+				</tbody>
+			</table>
+		</div>
+		<div class="display-search" id="display-search">
+			<h1>Search Results</h1>
+			<table class="table" id="table1">
+				<thead>
+					<tr>
+						<th scope="col">Name</th>
+						<th scope="col">Age</th>
+						<th scope="col">Courses</th>
+						<th scope="col">Grade</th>
+					</tr>
+				</thead>
+				<tbody id="tbody1">
+					<!-- <tr>
+						<th scope="row">1</th>
+						<td>This is a task</td>
+						<td>Lorem ipsum dolor sit amet consectetur adipisicing elit</td>
+						<td></td>
+					</tr> -->
+				</tbody>
+			</table>
+			<button id="clear-search">Clear Search</button>
+		</div>
 		<script src="./main.js"></script>
 	</body>
 </html>
