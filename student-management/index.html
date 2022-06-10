@@ -57,32 +57,58 @@
 		</style>
 	</head>
 	<body>
-		<div class="form-div">
+		<h1 class="header text-center">Student Management System</h1>
+		<div class="form-div container">
 			<form action="#" id="form">
-				<label for="name">Name</label>
-				<input type="text" id="name" placeholder="Enter student name" />
-				<p id="name-validator"></p>
-				<label for="age">Age</label>
-				<input type="number" id="age" />
-				<p id="age-validator"></p>
-				<label for="courses">Courses</label>
-				<input type="text" id="courses" />
-				<p id="courses-validator"></p>
-				<label for="grade">Grade</label>
-				<input type="number" id="grade" />
-				<p id="grade-validator"></p>
-				<button class="submit" id="submit-btn">Submit</button>
+				<div class="input-group mb-3">
+					<label for="name" class="input-group-text">Name</label>
+					<input
+						type="text"
+						id="name"
+						placeholder="Enter student name"
+						class="form-control"
+					/>
+					<p id="name-validator"></p>
+				</div>
+
+				<div class="input-group mb-3">
+					<label for="age" class="input-group-text">Age</label>
+					<input type="number" id="age" class="form-control" />
+					<p id="age-validator"></p>
+				</div>
+
+				<div class="input-group mb-3">
+					<label for="courses" class="input-group-text">Courses</label>
+					<input type="text" id="courses" class="form-control" />
+					<p id="courses-validator"></p>
+				</div>
+
+				<div class="input-group mb-3">
+					<label for="grade" class="input-group-text">Grade</label>
+					<input type="number" id="grade" class="form-control" />
+					<p id="grade-validator"></p>
+				</div>
+
+				<button class="submit btn btn-outline-secondary" id="submit-btn">
+					Submit
+				</button>
 			</form>
-			<button id="showbtn">Show Students</button>
-			<button id="closebtn">Close Students</button>
+			<button id="showbtn" class="btn btn-outline-secondary">
+				Show Students
+			</button>
+			<button id="closebtn" class="btn btn-outline-secondary">
+				Close Students
+			</button>
 		</div>
-		<div class="search">
-			<input type="text" id="search-bar" />
-			<button id="searchbtn">Search</button>
+		<div class="search input-group mb-3">
+			<input type="text" id="search-bar" class="form-control" />
+			<button id="searchbtn" class="btn btn-outline-secondary" type="button">
+				Search
+			</button>
 		</div>
 		<div class="display-students" id="display-students">
 			<h1>Students List</h1>
-			<table class="table" id="table">
+			<table class="table table-striped" id="table">
 				<thead>
 					<tr>
 						<th scope="col">Name</th>
@@ -103,7 +129,7 @@
 		</div>
 		<div class="display-search" id="display-search">
 			<h1>Search Results</h1>
-			<table class="table" id="table1">
+			<table class="table table-striped" id="table1">
 				<thead>
 					<tr>
 						<th scope="col">Name</th>
@@ -121,7 +147,9 @@
 					</tr> -->
 				</tbody>
 			</table>
-			<button id="clear-search">Clear Search</button>
+			<button id="clear-search" class="btn btn-outline-secondary">
+				Clear Search
+			</button>
 		</div>
 		<script src="./main.js"></script>
 	</body>
