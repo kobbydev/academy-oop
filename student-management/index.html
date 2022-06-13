@@ -25,7 +25,7 @@
 				padding: 0;
 			}
 			body {
-				padding: 10px;
+				padding: 100px;
 			}
 			label {
 				margin-right: 20px;
@@ -58,7 +58,7 @@
 	</head>
 	<body>
 		<h1 class="header text-center">Student Management System</h1>
-		<div class="form-div container">
+		<div class="form-div form_wrapper mb-3">
 			<form action="#" id="form">
 				<div class="input-group mb-3">
 					<label for="name" class="input-group-text">Name</label>
@@ -73,7 +73,7 @@
 
 				<div class="input-group mb-3">
 					<label for="age" class="input-group-text">Age</label>
-					<input type="number" id="age" class="form-control" />
+					<input type="number" id="age" class="form-control" min="1" max="40" />
 					<p id="age-validator"></p>
 				</div>
 

@@ -132,7 +132,9 @@ function enrollStudent(student) {
  */
 
 function searchStudent(name) {
-	let result = studentRoll.filter((nname) => nname.getName() === name);
+	let result = studentRoll.filter(
+		(nname) => nname.getName().includes(name) === name
+	);
 	for (index in result) {
 		tbody1.innerHTML += `<tr>
 										<th scope="row">${result[index].getName()}</th>
@@ -193,20 +195,20 @@ let table1 = document.getElementById("table1");
 console.log(studentName.value);
 
 function validateName() {
-	if (studentName.value === "") {
+	if (studentName.value.trim() === "") {
 		p1.innerHTML = "This field is required and cannot be a number";
 		return false;
 	}
 }
 function validateAge() {
-	if (studentAge.value === "") {
-		p2.innerHTML = "This field is required";
+	if (studentAge.value === "" || studentAge.value < 1) {
+		p2.innerHTML = "This field is required and must be 1 or more";
 		return false;
 	}
 }
 function validateGrade() {
-	if (studentGrade.value === "") {
-		p3.innerHTML = "This field is required";
+	if (studentGrade.value === "" || studentGrade.value < 1) {
+		p3.innerHTML = "This field is required and must be 1 or more";
 		return false;
 	}
 }
@@ -283,7 +285,7 @@ searchButton.addEventListener("click", function (event) {
 		alert("cannot search empty field");
 	} else {
 		tbody1.innerHTML = "";
-		searchStudent(searchBox.value);
+		searchStudent(searchBox.value.toLowerCase());
 		searchBox.value.innerHTML = "";
 		displaySeach.style.display = "block";
 		table1.style.display = "block";
