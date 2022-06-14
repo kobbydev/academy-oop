@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.box {
+				background-color: aqua;
+				height: 50px;
+				width: 50px;
+				margin: 50px;
+				/* border-radius: 20px; */
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<label for="delay">Delay</label>
+			<input type="text" id="delay" />
+			<label for="scale">Scale</label>
+			<input type="text" id="scale" />
+			<input type="submit" value="Grow" id="grow" />
+			<button id="shrink">Shrink</button>
+			<button id="round">Round</button>
+		</form>
+		<div class="box" id="box"></div>
+
+		<script src="./index.js"></script>
+	</body>
+</html>
