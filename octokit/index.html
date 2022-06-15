@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Octokit</title>
+		<style>
+			.card {
+				margin: 50px;
+				padding: 20px;
+				box-shadow: 10px;
+				text-align: center;
+				border-radius: 20px;
+				background-color: beige;
+				height: 700px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container" id="container">
+			<form action="#">
+				<label for="username">Username: </label>
+				<input type="text" id="username" />
+				<input type="submit" id="submit-btn" />
+			</form>
+			<div class="card" id="card">
+				<img src="" alt="" id="image" />
+				<p id="name"></p>
+				<p id="location"></p>
+				<p id="email"></p>
+				<p id="followers"></p>
+				<p id="following"></p>
+			</div>
+			<!-- <button class="click-btn" id="click-btn">Click Me</button> -->
+		</div>
+
+		<script src="./OctokitDemo.js" type="module"></script>
+	</body>
+</html>
