@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			table,
+			thead,
+			th,
+			td {
+				border: 1px solid black;
+			}
+			form {
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="add-user" id="add-user">
+			<form action="#">
+				<label for="name">Name: </label>
+				<input type="text" id="name" />
+				<label for="number">Number: </label>
+				<input type="number" id="number" />
+				<input type="submit" value="ADD/SEND" id="submit-btn" />
+			</form>
+		</div>
+		<div class="list-container" id="list-container">
+			<h1 class="header">LIST</h1>
+			<table>
+				<thead>
+					<tr>
+						<th id="lhname">Name</th>
+						<th id="lhnumber">Number</th>
+					</tr>
+				</thead>
+				<tbody id="tbody1">
+					<!-- <tr>
+						<td></td>
+						<td></td>
+					</tr> -->
+				</tbody>
+			</table>
+		</div>
+
+		<script src="./aeea-api.js"></script>
+	</body>
+</html>
